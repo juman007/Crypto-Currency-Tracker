@@ -47,7 +47,11 @@ const Home = () => {
                      {item.current_price.toLocaleString()}
                   </p>
 
-                  <p style={{ textAlign: "center" }}>
+                  <p
+                     className={
+                        item.price_change_percentage_24h > 0 ? "green" : "red"
+                     }
+                  >
                      {Math.floor(item.price_change_percentage_24h * 100) / 100}
                   </p>
 
